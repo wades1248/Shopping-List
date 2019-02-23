@@ -1,11 +1,3 @@
-/*Things to do in JS:
-Prevent default form submission,
-make form submission result in a new <li> element (copy and paste some code)
-ensure that forms enter on "return" and "click",
-add class "shopping-item_checked" upon clicking check buttom. (.toggleClass)
-remove "shopping-item_checkied" if buttom is checked again
-delete item when "delete" is clicked,
-ensure good semantic HTML is being used and that buttons are accessable,*/
 
 function runList(){
 
