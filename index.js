@@ -1,12 +1,11 @@
+$(function runList(){
 
-function runList(){
-
- $("#js-shopping-list-form").submit(event => {
-   event.preventDefault();
-   const usrInput = $("#shopping-list-entry").val();
-    $(".shopping-list").append(   
-        `<li>
-							<span class="shopping-item shopping-item">${usrInput}</span>
+	$("#js-shopping-list-form").submit(event => {
+		event.preventDefault();
+		const usrInput = $("#shopping-list-entry").val();
+			$(".shopping-list").append(
+				`<li>
+							<span class="shopping-item">${usrInput}</span>
 								<div class="shopping-item-controls">
 									<button class="shopping-item-toggle">
 										<span class="button-label">check</span>
@@ -19,14 +18,11 @@ function runList(){
 						}/*event function close*/
 					)/*submit close*/
 
- $(".shopping-item-toggle").click(event => {
-	$(event.target).closest("li").toggleClass("shopping-item__checked");
+	$(".shopping-list").on("click",".shopping-item-toggle", event => {
+		$(event.target).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
 		}/*event function close*/
 	)/*submit close*/
-	$(".shopping-item-delete").click(event => {
+	$(".shopping-list").on("click",".shopping-item-delete", event => {
 		$(event.target).closest("li").detach();})
 
-}/*runList close*/
-
-$(runList())
-
+})/*runList close*/
