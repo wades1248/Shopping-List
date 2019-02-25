@@ -18,11 +18,11 @@ $(function runList(){
 						}/*event function close*/
 					)/*submit close*/
 
-	$(".shopping-list").on("click",".shopping-item-toggle", event => {
-		$(event.target).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
+	$(".shopping-list").on("click",".shopping-item-toggle", function() {
+		$(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
 		}/*event function close*/
 	)/*submit close*/
-	$(".shopping-list").on("click",".shopping-item-delete", event => {
-		$(event.target).closest("li").detach();})
+	$(".shopping-list").on("click",".shopping-item-delete", function() {
+		$(this).closest("li").detach();})
 
 })/*runList close*/
